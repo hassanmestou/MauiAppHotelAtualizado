@@ -2,11 +2,63 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel1.Views.desenvolvedor"
-             Title="desenvolvedor">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="desenvolvedor"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="LightSeaGreen" Offset="0.0"/>
+            <GradientStop Color="LightCoral" Offset="0.5"/>
+            <GradientStop Color="HotPink" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        
+        <Frame
+            Padding="0"
+            WidthRequest="150"
+            HeightRequest="150"
+            CornerRadius="75"
+            BorderColor="DarkMagenta"
+            HasShadow="True"
+            IsClippedToBounds="True"
+            HorizontalOptions="Center">
+
+            <Image Source="caveira.jpg"
+                   Aspect="AspectFill"
+                   WidthRequest="150"
+                   HeightRequest="150"/>
+        </Frame>
+
+        <Frame 
+            BorderColor="DarkMagenta"
+            BackgroundColor="Black"
+            CornerRadius="12"
+            HasShadow="True"
+            Padding="15"
+            Margin="20"
+            HorizontalOptions="Center"
+            WidthRequest="300">
+
+            <VerticalStackLayout Spacing="5">
+                <Label 
+                    Text="Desenvolvedor: Hassan"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="DarkMagenta"
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="Versão: ALPHA 1.0.16_2"
+                    FontSize="14"
+                    TextColor="#333333"
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" Margin="8" WidthRequest="79"
+                BackgroundColor="Black" TextColor="DarkMagenta" BorderColor="DarkMagenta" BorderWidth="2"/>
     </VerticalStackLayout>
 </ContentPage>

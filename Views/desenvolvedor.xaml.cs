@@ -6,4 +6,18 @@ public partial class desenvolvedor : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void Button_Clicked(object sender, EventArgs e)
+	{
+		try
+		{
+			if (sender != null)
+			{
+				await Navigation.PushAsync(new ContratacaoHospedagem());
+			}
+		} catch (Exception es)
+		{
+			await DisplayAlert("ERRO", es.Message, "Voltar");
+		}
+	}
 }
